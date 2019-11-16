@@ -5,7 +5,7 @@ mcpe-protocol: [361]
 version: "1.0"
 author: superbobby
 commands:
-  vanish:
+  admin:
     description: "Vanish yourself"
     permission: "vanish.use"
 permissions:
