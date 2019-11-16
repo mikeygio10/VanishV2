@@ -35,13 +35,13 @@ class VanishV2 extends PluginBase {
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
         $name = $sender->getName();
-        if(strtolower($cmd->getName()) === "vanish"){
+        if(strtolower($cmd->getName()) === "admin"){
 	    if(!$sender instanceof Player){
                 $sender->sendMessage(self::PREFIX."§4Use this command InGame");
                 return false;
             }
 	    if(!$sender->hasPermission("vanish.use")){
-		$sender->sendMessage(self::PREFIX."§4You do not have permission to use this command");
+		$sender->sendMessage(self::PREFIX."§4Nice Try");
                 return false;
             }
             if(!in_array($name, self::$vanish)){
