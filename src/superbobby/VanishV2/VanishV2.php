@@ -15,7 +15,7 @@ use function in_array;
 use function strtolower;
 
 class VanishV2 extends PluginBase {
-    public const PREFIX = "§9Vanish §8» §r";
+    public const PREFIX = "§b[Vanish]";
 
     public static $vanish = [];
 
@@ -48,8 +48,8 @@ class VanishV2 extends PluginBase {
                 self::$vanish[] = $name;
 		$sender->sendMessage(self::PREFIX."§aYou are now vanished.");
 		$name = $sender->getName();
-		$sender->setNameTag("\n\n\n§6[VANISH]§r $name");
-		$sender->setDisplayName("\n\n\n§6[VANISH]§r $name");
+		$sender->setNameTag("§l§7[§bVANISHED§7]§e |§r $name");
+		$sender->setDisplayName("§l§7[§bVANISHED§7]§e |§r $name");
 		$entry = new PlayerListEntry();
 		$entry->uuid = $sender->getUniqueId();
 
